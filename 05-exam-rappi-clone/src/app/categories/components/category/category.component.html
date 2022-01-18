@@ -1,0 +1,17 @@
+<div nz-row nzAlign="middle" class="container" style="padding: 0 100px; background-color: white;">
+  <div nz-col nzSpan="24">
+    <h1>{{category?.name}}</h1>
+  </div>
+  <div nz-col nzSpan="24">
+    <img src="{{category?.image}}" alt="{{category?.name}}">
+  </div>
+  <div nz-col nzSpan="24">
+    <p>{{category?.description}}</p>
+  </div>
+
+  <div style="display: flex;">
+    <div *ngFor="let store of stores">
+      <app-store-card></app-store-card>
+    </div>
+  </div>
+</div>

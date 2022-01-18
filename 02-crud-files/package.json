@@ -1,0 +1,22 @@
+{
+  "name": "crud-files",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "nodemon index.ts",
+    "start:prod": "node dist/index.js",
+    "build": "tsc && yarn postBuild",
+    "postBuild": "cp -a data/ dist/data"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.1.3",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.3"
+  }
+}

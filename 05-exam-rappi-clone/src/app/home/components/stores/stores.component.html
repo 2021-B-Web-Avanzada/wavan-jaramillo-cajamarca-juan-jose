@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>Top de restaurantes de Ecuador</h2>
+  <div nz-row style="display: flex; gap: 40px;">
+    <div *ngFor="let store of stores" [routerLink]="['/stores', store.id.toString()]">
+      <app-stores-card [store]="store"></app-stores-card>
+    </div>
+  </div>
+</div>

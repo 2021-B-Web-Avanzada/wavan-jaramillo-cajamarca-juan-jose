@@ -1,0 +1,8 @@
+<div class="container">
+  <h2 style="font-weight: bold;">Categorías</h2>
+  <div class="categories--container">
+    <div *ngFor="let category of categories">
+      <app-category-card [category]="category"></app-category-card>
+    </div>
+  </div>
+</div>

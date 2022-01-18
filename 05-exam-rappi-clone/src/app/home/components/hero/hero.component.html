@@ -1,0 +1,20 @@
+<div nz-row nzAlign="middle" nzJustify="center" style="height: 300px; background-color: rgb(255, 68, 31); color: white">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <span>Si tienes <strong>Rappi,</strong> tienes Todo.</span>
+    <nz-input-group [nzPrefix]="prefixIconSearch">
+      <input type="text" nz-input placeholder="¿Dónde quieres recibir tu compra?" />
+    </nz-input-group>
+    <ng-template #prefixIconSearch>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6A696E" viewBox="0 0 24 24" class="LocationIcon-sc-1ynrae7 eVYJGn"><path fill="#6A696E" d="M12 2c-4.2 0-8 3.22-8 8.2 0 3.18 2.45 6.92 7.34 11.23.38.33.95.33 1.33 0C17.55 17.12 20 13.38 20 10.2 20 5.22 16.2 2 12 2zm0 10c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg>
+    </ng-template>
+  </div>
+</div>
+<div nz-row nzAlign="middle" nzJustify="space-between" style="padding: 0 30vw; height: 120px; background-color: rgb(255, 68, 31); color: white">
+  <div style="display: flex; gap:20px">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"><path fill="white" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0013 3.06V2c0-.55-.45-1-1-1s-1 .45-1 1v1.06A8.994 8.994 0 003.06 11H2c-.55 0-1 .45-1 1s.45 1 1 1h1.06A8.994 8.994 0 0011 20.94V22c0 .55.45 1 1 1s1-.45 1-1v-1.06A8.994 8.994 0 0020.94 13H22c.55 0 1-.45 1-1s-.45-1-1-1h-1.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"></path></svg>
+    <p>Usa tu ubicación actual</p>
+  </div>
+  <div style="display: flex;">
+    <p><a>Iniciar sesión</a> para ver tus direcciones recientes</p>
+  </div>
+</div>

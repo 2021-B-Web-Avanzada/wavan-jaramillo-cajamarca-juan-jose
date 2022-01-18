@@ -1,0 +1,12 @@
+<div class="container">
+  <img style="width: 100%; height: 200px; object-fit: cover;" src="https://via.placeholder.com/800x300" alt="banner">
+  <div style="padding: 60px 100px;">
+    <h2 style="font-weight: bold;">{{store?.name}}</h2>
+    <h4>Productos</h4>
+    <div style="display: flex; gap: 30px;">
+      <div *ngFor="let product of products">
+        <app-store-card></app-store-card>
+      </div>
+    </div>
+  </div>
+</div>
