@@ -1,0 +1,32 @@
+<nb-layout>
+  <nb-layout-header>
+    <div class="header-container">
+      <h1>Tic Tac Toe</h1>
+      <div>
+        <nb-user
+          *ngIf="currentUser"
+          [name]="currentUser.name || currentUser.email || 'no name'"
+          [nbContextMenu]="items"
+          nbContextMenuTag="my-context-menu"
+          [picture]="currentUser.photoURL || 'https://via.placeholder.com/150'"
+        >
+        </nb-user>
+        <nb-spinner
+          *ngIf="isLoading"
+          [nbSpinner]="isLoading"
+          status="success"
+        ></nb-spinner>
+      </div>
+    </div>
+  </nb-layout-header>
+
+  <nb-layout-column>
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+
+  <nb-layout-footer>
+    <small>
+      &copy; {{ today.getFullYear() }} <a href="https://www.juanjodev02.com">Juan José Jaramillo</a>
+    </small>
+  </nb-layout-footer>
+</nb-layout>

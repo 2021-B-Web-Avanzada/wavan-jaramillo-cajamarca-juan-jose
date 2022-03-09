@@ -1,0 +1,53 @@
+nb-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nb-form-field {
+  width: 100%;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+//mobile screen
+@media (max-width: 768px) {
+  button {
+    width: 100%;
+  }
+}
+
+// tablet screen
+@media (min-width: 768px) and (max-width: 1024px) {
+  button {
+    width: 70%;
+  }
+}
+
+// desktop screen
+@media (min-width: 1024px) {
+  button {
+    width: 150px;
+  }
+}
