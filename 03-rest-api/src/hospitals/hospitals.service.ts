@@ -30,6 +30,13 @@ export class HospitalsService {
   }
 
   async deleteHospital(id: number): Promise<Hospital> {
+    // delete all related patients
+    const patients = await this.prismaService.patient.findMany({
+      where: { hospital: { id } },
+    });
+    for (const patient of patients) {
+      await this.prismaService.patient.delete({ where: { id: patient.id } });
+    }
     return this.prismaService.hospital.delete({ where: { id } });
   }
 

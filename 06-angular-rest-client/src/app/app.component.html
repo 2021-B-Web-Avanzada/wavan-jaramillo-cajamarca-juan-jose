@@ -1,0 +1,17 @@
+<nb-layout>
+
+  <nb-sidebar>
+      <nb-menu tag="menu" [items]="items">
+      </nb-menu>
+  </nb-sidebar>
+
+  <nb-layout-header>
+    <img src="/assets/logo.png" alt="image-logo" height="50" width="50"/>
+    <h1>Gestión de hospitales</h1>
+  </nb-layout-header>
+
+  <nb-layout-column class="colored-column-basic">
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+
+</nb-layout>

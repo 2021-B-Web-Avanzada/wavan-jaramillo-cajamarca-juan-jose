@@ -1,0 +1,24 @@
+<nb-card size="medium" [nbSpinner]="isLoading" nbSpinnerStatus="primary" status="basic">
+  <nb-card-header>
+    <h4>Pacientes</h4>
+    <button (click)="addPatient()" nbTooltip="Agregar nuevo paciente" nbButton ghost status="success"><nb-icon icon="plus-outline"></nb-icon></button>
+  </nb-card-header>
+  <nb-card-body>
+    <nb-list>
+      <nb-list-item *ngFor="let patient of patients">
+        <div class="list-item">
+          <nb-user
+            title="{{ patient.email }}"
+            size="giant"
+            [name]="patient.name"
+            [picture]="patient.image"
+          ></nb-user>
+          <div>
+            <button (click)="open(patient)" nbButton ghost status="success"><nb-icon icon="edit-outline"></nb-icon></button>
+            <button (click)="delete(patient)" nbButton ghost status="danger"><nb-icon icon="trash-2-outline"></nb-icon></button>
+          </div>
+        </div>
+      </nb-list-item>
+    </nb-list>
+  </nb-card-body>
+</nb-card>

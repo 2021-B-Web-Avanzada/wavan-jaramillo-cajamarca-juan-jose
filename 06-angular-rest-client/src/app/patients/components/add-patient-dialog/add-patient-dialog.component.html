@@ -1,0 +1,53 @@
+<nb-card
+  [nbSpinner]="isLoading"
+  nbSpinnerStatus="primary"
+>
+  <nb-card-header >
+    <h4>Pacientes</h4>
+  </nb-card-header>
+  <nb-card-body>
+    <form
+      id="form"
+      [formGroup]="form"
+    >
+      <div class="input-field">
+        <label for="hospitalId">Nombre</label>
+        <nb-select [(selected)]="selectedHospitalId" name="hospitalId" id="hospitalId">
+          <nb-option *ngFor="let hospital of hospitals" [value]="hospital.id">{{ hospital.name }}</nb-option>
+        </nb-select>
+      </div>
+      <div class="input-field">
+        <label for="name">Nombre</label>
+        <input id="name" formControlName="name" name="name" fullWidth type="text" nbInput placeholder="Nombre">
+      </div>
+      <div class="input-field">
+        <label for="age">Edad</label>
+        <input id="age" formControlName="age" name="age" fullWidth type="number" nbInput placeholder="Edad">
+      </div>
+      <div class="input-field">
+        <label for="identity">Cédula de identidad</label>
+        <input id="identity" formControlName="identity" name="identity" fullWidth type="text" nbInput placeholder="Cédula">
+      </div>
+      <div class="input-field">
+        <label for="address">Dirección</label>
+        <input id=""address formControlName="address" name="address" fullWidth type="text" nbInput placeholder="Dirección">
+      </div>
+      <div class="input-field">
+        <label for="phone">Teléfono</label>
+        <input if="phone" formControlName="phone" name="phone" fullWidth type="tel" nbInput placeholder="Teléfono">
+      </div>
+      <div class="input-field">
+        <label for="email">Correo electrónico</label>
+        <input id="email" formControlName="email" name="email" fullWidth type="email" nbInput placeholder="Email">
+      </div>
+      <div class="input-field">
+        <label for="description">Descripción</label>
+        <textarea id="description" formControlName="description" name="description" nbInput fullWidth placeholder="Algo interesante del paciente"></textarea>
+      </div>
+    </form>
+  </nb-card-body>
+  <nb-card-footer>
+    <button nbButton status="danger" (click)="close()">Cancelar</button>
+    <button type="submit" form="form" nbButton status="success" (click)="save()">Guardar</button>
+  </nb-card-footer>
+</nb-card>

@@ -1,0 +1,23 @@
+<nb-card size="medium" [nbSpinner]="isLoading" nbSpinnerStatus="primary" status="basic">
+  <nb-card-header>
+    <h4>Hospitales</h4>
+    <button (click)="addHospital()" nbTooltip="Agregar nuevo paciente" nbButton ghost status="success"><nb-icon icon="plus-outline"></nb-icon></button>
+  </nb-card-header>
+  <nb-card-body>
+    <nb-list>
+      <nb-list-item *ngFor="let hospital of hospitals">
+        <div class="list-item">
+          <nb-user
+            title="{{ hospital.address }}"
+            size="giant"
+            [name]="hospital.name"
+          ></nb-user>
+          <div>
+            <button (click)="open(hospital)" nbButton ghost status="success"><nb-icon icon="edit-outline"></nb-icon></button>
+            <button (click)="delete(hospital)" nbButton ghost status="danger"><nb-icon icon="trash-2-outline"></nb-icon></button>
+          </div>
+        </div>
+      </nb-list-item>
+    </nb-list>
+  </nb-card-body>
+</nb-card>
